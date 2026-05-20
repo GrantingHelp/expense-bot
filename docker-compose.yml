@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  expense-bot:
+    build: .
+    container_name: expense-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./photos:/app/photos
+      - ./trip_log.json:/app/trip_log.json
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

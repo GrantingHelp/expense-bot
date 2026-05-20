@@ -1,0 +1,10 @@
+.env
+venv/
+trip_log.json
+photos/
+temp_photos/
+__pycache__/
+*.pyc
+*.pdf
+.DS_Store
+.idea/
